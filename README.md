@@ -27,13 +27,13 @@ By indexing dense text vectors aligned via contrastive pre-training, the engine 
 
 ## 🚀 Quick Start & Installation
 
-### 2. Install Requirements
+### Install Requirements
 ```bash
 pip install sentence-transformers faiss-cpu datasets pillow matplotlib seaborn scikit-learn
 ```
 
-### 2. Execution Flow
+### Execution Flow
 The code is modularized into sequential production milestones:Dataset Initialization: Fetches the retail catalog and constructs descriptive textual metadata profiles.Embedding Extraction: Passes data tokens through the CLIP encoder to extract 512-dimensional vector representations.Index Rebuilding: Normalizes embeddings ($L_2$) and binds them into a searchable FAISS IndexFlatIP pool.Search Interface: Natively processes both visual image uploads and natural text query formats.
 
-### 4. Evaluation Metrics
-The pipeline is quantitatively validated using information retrieval benchmarks to monitor system performance under catalog constraints:Mean Reciprocal Rank (MRR): Evaluates the average reciprocal rank of the first relevant item, measuring how effectively target classes surface in the top deck.Confusion Matrix Heatmap: Tracks cross-modal visual misclassifications (e.g., verifying vector separation between morphologically similar items like Pullovers and Coats).Precision@K & Recall@K Curves: Profiles retrieval quality across dynamic search depths ($K = 1$ to $K = 10$).
+### 📊 Evaluation Metrics
+The pipeline is quantitatively validated using information retrieval benchmarks to monitor system performance under catalog constraints:Mean Reciprocal Rank (MRR): Evaluates the average reciprocal rank of the first relevant item, measuring how effectively target classes surface in the top deck.Confusion Matrix Heatmap: Tracks cross-modal visual misclassifications (e.g., verifying vector separation between morphologically similar items like Pullovers and Coats).Precision@K & Recall@K Curves: Profiles retrieval quality across dynamic search depths ($K=1$ to $K=10$).
